@@ -152,7 +152,7 @@ namespace VaultSharp.V1.SecretsEngines.KeyValue.V2
         Task WriteSecretAsync<T>(string path, T data, int? checkAndSet = null, string mountPoint = SecretsEngineDefaultPaths.KeyValueV2);
 
         /// <summary>
-        /// Deletes the value at the specified path in Vault.
+        /// Deletes the value at the specified path in Vault for the given versions.
         /// </summary>
         /// <param name="path"><para>[required]</para>
         /// The path where the value is to be stored.</param>
@@ -168,5 +168,19 @@ namespace VaultSharp.V1.SecretsEngines.KeyValue.V2
         /// The task.
         /// </returns>
         Task DestroySecretAsync(string path, IList<int> versions, string mountPoint = SecretsEngineDefaultPaths.KeyValueV2);
+
+        /// <summary>
+        /// Deletes the value at the specified path in Vault.
+        /// </summary>
+        /// <param name="path"><para>[required]</para>
+        /// The path where the value is to be stored.</param>
+        /// <param name="mountPoint"><para>[optional]</para>
+        /// The mount point for the Generic backend. Defaults to <see cref="SecretsEngineDefaultPaths.KeyValueV2" />
+        /// Provide a value only if you have customized the mount point.
+        /// </param>
+        /// <returns>
+        /// The task.
+        /// </returns>
+        Task DestroySecretAsync(string path, string mountPoint = SecretsEngineDefaultPaths.KeyValueV2);
     }
 }
