@@ -1,7 +1,7 @@
 ﻿using VaultSharp.Core;
-using VaultSharp.V1.Commons;
 using VaultSharp.V1;
 using System;
+using System.Net.Http;
 
 namespace VaultSharp
 {
@@ -19,6 +19,17 @@ namespace VaultSharp
         public VaultClient(VaultClientSettings vaultClientSettings)
         {
             polymath = new Polymath(vaultClientSettings);
+            V1 = new VaultClientV1(polymath);
+        }
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="vaultClientSettings"></param>
+        /// <param name="httpClient"></param>
+        public VaultClient(VaultClientSettings vaultClientSettings, HttpClient httpClient)
+        {
+            polymath = new Polymath(vaultClientSettings, httpClient);
             V1 = new VaultClientV1(polymath);
         }
 
