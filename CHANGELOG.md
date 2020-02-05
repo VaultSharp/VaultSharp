@@ -1,3 +1,20 @@
+## 0.11.2000 (February 21, 2019)
+
+First release under new name and github repo
+
+**FEATURES:**
+  * [GH-1] Add possibility to revoke certificate
+  * [GH-2] Add expiration to response of GetCertificateCredentials 
+  * [GH-3] Extended the TOTP secrets engine with the remaining API methods. 
+  * [GH-5] Make Polymath and VaultClient disposable in order to cleanup httpclient
+  * [GH-6] Allow r/w of SecretData<T> 
+  * [GH-7] Added httpClient to Vault client constructor
+  * [GH-8] Add method to destroys a secret for a specified location
+
+**BUG FIXES:**
+  * [GH-4] Avoid deadlock when calling from synchronous code
+
+
 ## 0.11.1002 (April 21, 2019)
 
 **FEATURES:**
