@@ -10,9 +10,11 @@ First release under new name and github repo
   * [GH-6] Allow r/w of SecretData<T> 
   * [GH-7] Added httpClient to Vault client constructor
   * [GH-8] Add method to destroys a secret for a specified location
+  * [upstream/GH-94] Add namespace support 
 
 **BUG FIXES:**
   * [GH-4] Avoid deadlock when calling from synchronous code
+  * [upstream/GH-83] GetSecretBackendsAsync() throws json deserialization error
 
 
 ## 0.11.1002 (April 21, 2019)
