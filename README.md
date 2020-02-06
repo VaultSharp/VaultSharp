@@ -3,7 +3,7 @@ VaultSharp
 
 A cross-platform .NET Library for HashiCorp's Vault - A Secret Management System.
 
-**VaultSharp NuGet:** [![NuGet](https://img.shields.io/nuget/dt/VaultSharp.svg?style=flat)](https://www.nuget.org/packages/VaultSharp)	
+**VaultSharp NuGet:** [![NuGet](https://img.shields.io/nuget/dt/VaultSharp.svg?style=flat)](https://www.nuget.org/packages/VaultSharp.vNext)	
 
 **VaultSharp Latest Documentation:** Inline Below and also at: https://vaultsharp.github.io/VaultSharp/
 
@@ -11,7 +11,7 @@ A cross-platform .NET Library for HashiCorp's Vault - A Secret Management System
 
 **Report Issues/Feedback:** [Create a VaultSharp GitHub issue](https://github.com/VaultSharp/VaultSharp/issues/new)
 
-[![NuGet](https://img.shields.io/nuget/dt/VaultSharp.svg?style=flat)](https://www.nuget.org/packages/VaultSharp)	
+[![NuGet](https://img.shields.io/nuget/dt/VaultSharp.vNext.svg?style=flat)](https://www.nuget.org/packages/VaultSharp.vNext)	
 [![Join the chat at https://gitter.im/rajanadar-VaultSharp/Lobby](https://badges.gitter.im/rajanadar-VaultSharp/Lobby.svg)](https://gitter.im/rajanadar-VaultSharp/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)	
 [![License](https://img.shields.io/:license-apache%202.0-brightgreen.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)	
 [![Build status](https://ci.appveyor.com/api/projects/status/o9q67ouw5o5q3ysj?svg=true)](https://ci.appveyor.com/project/hoerup/vaultsharp)
