@@ -1,4 +1,10 @@
-## 0.11.2000 (February 21, 2019)
+## 0.11.2001 (February 12, 2019)
+
+**BUG FIXES:**
+  * [GH-9] Avoid deadlock when calling from synchronous code
+
+
+## 0.11.2000 (February 6, 2019)
 
 First release under new name and github repo
 

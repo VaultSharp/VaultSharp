@@ -6,7 +6,7 @@
     <SignAssembly>true</SignAssembly>
     <DelaySign>false</DelaySign>
     <AssemblyOriginatorKeyFile>VaultSharp.snk</AssemblyOriginatorKeyFile>
-    <Version>0.11.2000</Version>
+    <Version>0.11.2001</Version>
     <Authors>Raja Nadar et al.</Authors>
     <Copyright>Copyright ©  2019 Raja Nadar. All rights reserved.</Copyright>
     <PackageIcon>VaultSharpIcon.png</PackageIcon>
@@ -23,8 +23,8 @@
  * This library is built with .NET Standard 1.3 &amp; .NET 4.5 and hence is cross-platform across .NET Core 1.0, .NET 4.5 and more, Xamarin iOS, Android, Mac, UWP etc.</Description>
     <RepositoryType>Github</RepositoryType>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>0.11.2000.0</AssemblyVersion>
-    <FileVersion>0.11.2000.0</FileVersion>
+    <AssemblyVersion>0.11.2001.0</AssemblyVersion>
+    <FileVersion>0.11.2001.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
