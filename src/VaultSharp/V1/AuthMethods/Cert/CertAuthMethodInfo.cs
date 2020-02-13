@@ -51,6 +51,7 @@ namespace VaultSharp.V1.AuthMethods.Cert
         {
             Checker.NotNull(mountPoint, "mountPoint");
             Checker.NotNull(clientCertificate, "clientCertificate");
+            Checker.IsTrue(clientCertificate.HasPrivateKey, "clientCertificate.HasPrivateKey");
 
             MountPoint = mountPoint;
             ClientCertificate = clientCertificate;

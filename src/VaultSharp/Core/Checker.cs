@@ -30,5 +30,13 @@ namespace VaultSharp.Core
                 throw new ArgumentException("'" + name + "' value is empty or contains white-space characters only.", name);
             }
         }
+
+        public static void IsTrue(bool value, string name)
+        {
+            if (!value)
+            {
+                throw new ArgumentException("'" + name + "' value was not true.", name);
+            }
+        }
     }
 }
