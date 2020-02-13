@@ -3,11 +3,9 @@ VaultSharp
 
 A cross-platform .NET Library for HashiCorp's Vault - A Secret Management System.
 
-**VaultSharp NuGet:** [![NuGet](https://img.shields.io/nuget/dt/VaultSharp.svg?style=flat)](https://www.nuget.org/packages/VaultSharp.vNext)	
+**VaultSharp NuGet:** [![NuGet](https://img.shields.io/nuget/dt/VaultSharp.vNext.svg?style=flat)](https://www.nuget.org/packages/VaultSharp.vNext)	
 
 **VaultSharp Latest Documentation:** Inline Below and also at: https://vaultsharp.github.io/VaultSharp/
-
-**Older VaultSharp 0.6.x Documentation:** [0.6.x Docs](https://github.com/VaultSharp/VaultSharp/blob/master/README-0.6.x.md)
 
 **Report Issues/Feedback:** [Create a VaultSharp GitHub issue](https://github.com/VaultSharp/VaultSharp/issues/new)
 
