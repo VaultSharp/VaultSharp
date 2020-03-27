@@ -139,46 +139,15 @@ namespace VaultSharp.Core
                     ? new StringContent(JsonConvert.SerializeObject(requestData), Encoding.UTF8)
                     : null;
 
-                HttpRequestMessage httpRequestMessage = null;
+                var httpRequestMessage = new HttpRequestMessage(httpMethod, requestUri);
 
-                switch (httpMethod.ToString().ToUpperInvariant())
+                if (httpMethod == HttpMethod.Post || httpMethod == HttpMethod.Put)
                 {
-                    case "GET":
-
-                        httpRequestMessage = new HttpRequestMessage(HttpMethod.Get, requestUri);
-                        break;
-
-                    case "DELETE":
-
-                        httpRequestMessage = new HttpRequestMessage(HttpMethod.Delete, requestUri);
-                        break;
-
-                    case "POST":
-
-                        httpRequestMessage = new HttpRequestMessage(HttpMethod.Post, requestUri)
-                        {
-                            Content = requestContent
-                        };
-
-                        break;
-
-                    case "PUT":
-
-                        httpRequestMessage = new HttpRequestMessage(HttpMethod.Put, requestUri)
-                        {
-                            Content = requestContent
-                        };
-
-                        break;
-
-                    case "HEAD":
-
-                        httpRequestMessage = new HttpRequestMessage(HttpMethod.Head, requestUri);
-                        break;
-
-                    default:
-                        throw new NotSupportedException("The Http Method is not supported: " + httpMethod);
+                    httpRequestMessage.Content = requestContent; 
                 }
+
+                if (httpMethod != HttpMethod.Post && httpMethod != HttpMethod.Put && httpMethod != HttpMethod.Options && httpMethod != HttpMethod.Get && !string.Equals(httpMethod.Method, "LIST", StringComparison.OrdinalIgnoreCase))
+                    throw new NotSupportedException("The Http Method is not supported: " + httpMethod);
 
                 if (headers != null)
                 {

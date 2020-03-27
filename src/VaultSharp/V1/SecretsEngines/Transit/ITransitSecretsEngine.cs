@@ -9,6 +9,23 @@ namespace VaultSharp.V1.SecretsEngines.Transit
     public interface ITransitSecretsEngine
     {
         /// <summary>
+        /// This endpoint returns a list of keys. 
+        /// Only the key names are returned (not the actual keys themselves).
+        /// </summary>
+        /// <param name="mountPoint"><para>[optional]</para>
+        /// The mount point for the Transit backend. Defaults to <see cref="SecretsEngineDefaultPaths.Transit" />
+        /// Provide a value only if you have customized the mount point.
+        /// </param>
+        /// /// <param name="wrapTimeToLive">
+        /// <para>[optional]</para>
+        /// The TTL for the token and can be either an integer number of seconds or a string duration of seconds.
+        /// </param>
+        /// <returns>
+        /// The key names.
+        /// </returns>
+        Task<Secret<ListResponse>> ListAsync(string mountPoint = SecretsEngineDefaultPaths.Transit, string wrapTimeToLive = null);
+
+        /// <summary>
         /// Encrypts the provided plaintext using the named key.
         /// This path supports the create and update policy capabilities as follows: 
         /// if the user has the create capability for this endpoint in their policies, 
@@ -58,5 +75,28 @@ namespace VaultSharp.V1.SecretsEngines.Transit
         /// The secret with plain text.
         /// </returns>
         Task<Secret<DecryptionResponse>> DecryptAsync(string keyName, DecryptRequestOptions decryptRequestOptions, string mountPoint = SecretsEngineDefaultPaths.Transit, string wrapTimeToLive = null);
+
+        /// <summary>
+        /// Rewraps the provided ciphertext using the latest version of the named key. Because this never returns plaintext, it is possible to delegate this functionality to untrusted users or scripts.
+        /// </summary>
+        /// <param name="keyName">
+        /// [required]
+        /// Specifies the name of the encryption key to re-encrypt against. This is specified as part of the URL.
+        /// </param>
+        /// <param name="rewrapRequestOptions"><para>[required]</para>
+        /// The options.
+        /// </param>
+        /// <param name="mountPoint"><para>[optional]</para>
+        /// The mount point for the Transit backend. Defaults to <see cref="SecretsEngineDefaultPaths.Transit" />
+        /// Provide a value only if you have customized the mount point.
+        /// </param>
+        /// <param name="wrapTimeToLive">
+        /// <para>[optional]</para>
+        /// The TTL for the token and can be either an integer number of seconds or a string duration of seconds.
+        /// </param>
+        /// <returns>
+        /// The secret with plain text.
+        /// </returns>
+        Task<Secret<RewrapResponse>> RewrapAsync(string keyName, RewrapRequestOptions rewrapRequestOptions, string mountPoint = SecretsEngineDefaultPaths.Transit, string wrapTimeToLive = null);
     }
 }
